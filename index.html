@@ -1,368 +1,396 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Kallol Chakrabarti | Global Record Achievements</title>   
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
-<style> 
-* { 
-margin: 0; 
-padding: 0; 
-box-sizing: border-box; 
-}   
-body { 
-font-family: 'Inter', sans-serif; 
-background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f2444 100%); 
-color: white; 
-min-height: 100vh; 
-display: flex; 
-align-items: center; 
-justify-content: center; 
-text-align: center; 
-padding: 40px 20px; 
-}   
-/* Subtle animated background particles */ 
-body::before { 
-content: ''; 
-position: fixed; 
-top: 0; left: 0; right: 0; bottom: 0; 
-background: 
-radial-gradient(ellipse at 20% 50%, rgba(56, 189, 248, 0.06) 0%, transparent 60%),   radial-gradient(ellipse at 80% 20%, rgba(129, 140, 248, 0.06) 0%, transparent 60%), 
-radial-gradient(ellipse at 60% 80%, rgba(245, 158, 11, 0.04) 0%, transparent 50%); 
-pointer-events: none; 
-z-index: 0; 
-}   
-.container { 
-max-width: 960px; 
-padding: 50px 40px; 
-position: relative; 
-z-index: 1; 
-}   
-/* Badge */ 
-.badge { 
-display: inline-block; 
-background: rgba(56, 189, 248, 0.12); 
-border: 1px solid rgba(56, 189, 248, 0.3); 
-color: #38bdf8; 
-font-size: 12px; 
-font-weight: 600; 
-letter-spacing: 2px; 
-text-transform: uppercase; 
-padding: 6px 18px; 
-border-radius: 50px; 
-margin-bottom: 24px; 
-}   
-h1 { 
-font-size: 46px; 
-font-weight: 700; 
-margin-bottom: 18px; 
-background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc); 
--webkit-background-clip: text; 
--webkit-text-fill-color: transparent; 
-line-height: 1.2; 
-}   
-.subtitle { 
-font-size: 17px; 
-font-weight: 400; 
-margin-bottom: 14px; 
-opacity: 0.88; 
-line-height: 1.7; 
-color: #cbd5e1; 
-}   
-/* Stats row */ 
-.stats { 
-display: flex; 
-justify-content: center; 
-gap: 32px; 
-margin: 28px 0 44px; 
-flex-wrap: wrap; 
-}   
-.stat { 
-display: flex; 
-flex-direction: column; 
-align-items: center; 
-}   
-.stat-number { 
-font-size: 26px; 
-font-weight: 700; 
-background: linear-gradient(to right, #38bdf8, #818cf8); 
--webkit-background-clip: text; 
--webkit-text-fill-color: transparent; 
-}   
-.stat-label { 
-font-size: 11px; 
-font-weight: 500; 
-letter-spacing: 1px; 
-text-transform: uppercase; 
-color: #94a3b8; 
-margin-top: 3px; 
-}   
-.stat-divider { 
-width: 1px; 
-background: rgba(255,255,255,0.12); 
-align-self: stretch; 
-}   
-/* Section label */ 
-.section-label { 
-font-size: 11px; 
-font-weight: 600; 
-letter-spacing: 2px; 
-text-transform: uppercase; 
-color: #64748b; 
-margin-bottom: 16px; 
-}   
-.button-group { 
-display: flex; 
-flex-direction: column; 
-gap: 14px; 
-align-items: center; 
-}   
-/* Divider between button groups */ 
-.btn-divider { 
-width: 100%; 
-max-width: 400px; 
-height: 1px; 
-background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent); 
-margin: 8px 0; 
-}   
-.btn { 
-text-decoration: none; 
-padding: 16px 32px; 
-border-radius: 14px; 
-font-size: 15px; 
-font-weight: 600; 
-width: 380px; 
-transition: all 0.3s ease; 
-display: flex; 
-align-items: center; 
-justify-content: center; 
-gap: 10px; 
-letter-spacing: 0.3px; 
-}   
-/* Primary Button */ 
-.btn-primary { 
-background: linear-gradient(90deg, #2563eb, #7c3aed); 
-color: white; 
-box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35); 
-}   
-.btn-primary:hover { 
-transform: translateY(-4px); 
-box-shadow: 0 14px 32px rgba(37, 99, 235, 0.5); 
-}   
-/* Secondary Button */ 
-.btn-secondary { 
-background: transparent; 
-border: 2px solid #38bdf8; 
-color: #38bdf8; 
-}   
-.btn-secondary:hover { 
-background: #38bdf8; 
-color: #0f172a; 
-transform: translateY(-4px); 
-box-shadow: 0 10px 28px rgba(56, 189, 248, 0.3); 
-}   
-/* Accent Button */ 
-.btn-accent { 
-background: linear-gradient(90deg, #f59e0b, #ef4444); 
-color: white; 
-box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35); 
-}   
-.btn-accent:hover { 
-transform: translateY(-4px); 
-box-shadow: 0 14px 32px rgba(245, 158, 11, 0.5); 
-}   
-/* Glass Button */ 
-.btn-glass { 
-background: rgba(255,255,255,0.07); 
-border: 1px solid rgba(255,255,255,0.18); 
-backdrop-filter: blur(10px); 
-color: #e2e8f0; 
-}   
-.btn-glass:hover { 
-background: rgba(255,255,255,0.14); 
-transform: translateY(-4px); 
-border-color: rgba(255,255,255,0.32); 
-box-shadow: 0 10px 28px rgba(0,0,0,0.3); 
-}   
-/* NEW: Google AI Button — teal/emerald */ 
-.btn-google-ai { 
-background: linear-gradient(90deg, #059669, #0d9488); 
-color: white; 
-box-shadow: 0 8px 24px rgba(5, 150, 105, 0.35); 
-position: relative; 
-overflow: hidden; 
-}   
-.btn-google-ai::before { 
-content: ''; 
-position: absolute; 
-top: -50%; left: -50%; 
-width: 200%; height: 200%; 
-background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%); 
-opacity: 0; 
-transition: opacity 0.3s; 
-}   
-.btn-google-ai:hover::before { 
-opacity: 1; 
-}   
-.btn-google-ai:hover { 
-transform: translateY(-4px); 
-box-shadow: 0 14px 32px rgba(5, 150, 105, 0.5); 
-}   
-/* NEW: Google AI Headings Button — indigo/violet */ 
-.btn-google-headings { 
-background: linear-gradient(90deg, #6366f1, #a855f7); 
-color: white; 
-box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35); 
-position: relative; 
-overflow: hidden; 
-}   
-.btn-google-headings::before { 
-content: ''; 
-position: absolute; 
-top: -50%; left: -50%; 
-width: 200%; height: 200%; 
-background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%); 
-opacity: 0; 
-transition: opacity 0.3s; 
-}   
-.btn-google-headings:hover::before { 
-opacity: 1; 
-}   
-.btn-google-headings:hover { 
-transform: translateY(-4px); 
-box-shadow: 0 14px 32px rgba(99, 102, 241, 0.5); 
-}   
-/* NEW: Folder Button — slate gradient */ 
-.btn-folder { 
-background: linear-gradient(90deg, #64748b, #94a3b8); 
-color: white; 
-box-shadow: 0 8px 24px rgba(100, 116, 139, 0.35); 
-position: relative; 
-overflow: hidden; 
-}   
-.btn-folder::before { 
-content: ''; 
-position: absolute; 
-top: -50%; left: -50%; 
-width: 200%; height: 200%; 
-background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%); 
-opacity: 0; 
-transition: opacity 0.3s; 
-}   
-.btn-folder:hover::before { 
-opacity: 1; 
-}   
-.btn-folder:hover { 
-transform: translateY(-4px); 
-box-shadow: 0 14px 32px rgba(100, 116, 139, 0.5); 
-}   
-/* Icon styling */ 
-.btn-icon { 
-font-size: 18px; 
-flex-shrink: 0; 
-}   
-.footer { 
-margin-top: 52px; 
-font-size: 13px; 
-color: #475569; 
-letter-spacing: 0.5px; 
-}   
-.footer a { 
-color: #38bdf8; 
-text-decoration: none; 
-}   
-@media (max-width: 600px) { 
-h1 { 
-font-size: 28px; 
-} 
-.btn { 
-width: 100%; 
-font-size: 14px; 
-} 
-.stats { 
-gap: 16px; 
-} 
-.stat-divider { 
-display: none; 
-} 
-.container { 
-padding: 30px 20px; 
-} 
-} 
-</style> 
-</head>   
-<body>   
-<div class="container">   
-<div class="badge"> 🌐  World Record Independent Researcher</div>   
-<h1>Global Record-Worthy Achievements</h1>   
-<p class="subtitle"> 
-Independent Research Portfolio by <strong>Kallol Chakrabarti</strong><br> 
-Helix Originator · Father of Original Concepts · Top 4.5% on SSRN among 27 million authors. 
-</p>   
-<!-- Stats Row --> 
-<div class="stats"> 
-<div class="stat"> 
-<span class="stat-number">264+</span> 
-<span class="stat-label">DOI Publications</span> 
-</div> 
-<div class="stat-divider"></div> 
-<div class="stat"> 
-<span class="stat-number">219+</span> 
-<span class="stat-label">Original Concepts</span> 
-</div> 
-<div class="stat-divider"></div> 
-<div class="stat"> 
-<span class="stat-number">23+</span> 
-<span class="stat-label">World-First Reckoners</span> 
-</div> 
-<div class="stat-divider"></div> 
-<div class="stat"> 
-<span class="stat-number">5,000+</span> 
-<span class="stat-label">Global Downloads</span> 
-</div> 
-</div>   
-<div class="button-group">   
-<!-- Button 1: Original --> 
-<a href="Global%20Record-Worthy%20Achievements%20Portfolio.pptx" 
-class="btn btn-primary" target="_blank"> 
-<span class="btn-icon"> 📘 </span> View Official Portfolio (PPT) 
-</a>   
-<!-- Button 2: Original --> 
-<a href="Screenshots%20of%20Institutions.pdf" 
-class="btn btn-secondary" target="_blank"> 
-<span class="btn-icon"> 🏛 </span> View Institutional Validations 
-</a>   
-<!-- Button 3: Original --> 
-<a href="All_Screenshots_Kallol_Chakrabarti%20updated.pdf" 
-class="btn btn-accent" target="_blank"> 
-<span class="btn-icon"> 📸 </span> View Research Validation Screenshots 
-</a>   
-<!-- Button 4: Original --> 
-<a href="https://zenodo.org/records/17417996" 
-class="btn btn-glass" target="_blank"> 
-<span class="btn-icon"> 🧠 </span> View Desci Labs 90+ Novelty Score Articles (Zenodo DOI) 
-</a>   
-<div class="btn-divider"></div>   
-<!-- Button 5: NEW — Google AI Screenshots PDF --> 
-<a href="Google%20AI%20Screenshots.pdf" 
-class="btn btn-google-ai" target="_blank"> 
-<span class="btn-icon"> 🤖 </span> View Google AI Overview Screenshots 
-</a>   
-<!-- Button 6: NEW — Google AI Headings PDF --> 
-<a href="Google_AI_Screenshots_Headings.pdf" 
-class="btn btn-google-headings" target="_blank"> 
-<span class="btn-icon"> 📋 </span> View Google AI Screenshots Index & Headings 
-</a>   
-<!-- Button 7: NEW — Screenshot Folder (GitHub) --> 
-<a href="https://github.com/HelixOriginator/Screenshots-Institutions-Kallol-Chakrabarti-Validation/tree/main/Screenshot%20folder" 
-class="btn btn-folder" target="_blank"> 
-<span class="btn-icon"> 📁 </span> View Screenshot Folder (GitHub) 
-</a>   
-</div>   
-<div class="footer"> 
-© 2026 Kallol Chakrabarti · Independent Research Documentation 
-</div>   
-</div>   
-</body> 
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Kallol Chakrabarti | Global Record Achievements</title>  
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+<style>  
+* {  
+margin: 0;  
+padding: 0;  
+box-sizing: border-box;  
+}  
+body {  
+font-family: 'Inter', sans-serif;  
+background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f2444 100%);  
+color: white;  
+min-height: 100vh;  
+display: flex;  
+align-items: center;  
+justify-content: center;  
+text-align: center;  
+padding: 40px 20px;  
+}  
+/* Subtle animated background particles */  
+body::before {  
+content: '';  
+position: fixed;  
+top: 0; left: 0; right: 0; bottom: 0;  
+background:  
+radial-gradient(ellipse at 20% 50%, rgba(56, 189, 248, 0.06) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(129, 140, 248, 0.06) 0%, transparent 60%),  
+radial-gradient(ellipse at 60% 80%, rgba(245, 158, 11, 0.04) 0%, transparent 50%);  
+pointer-events: none;  
+z-index: 0;    }  
+.container {  
+max-width: 960px;  
+padding: 50px 40px;  
+position: relative;  
+z-index: 1;  
+}  
+/* Badge */  
+.badge {  
+display: inline-block;  
+background: rgba(56, 189, 248, 0.12);  
+border: 1px solid rgba(56, 189, 248, 0.3);  
+color: #38bdf8;  
+font-size: 12px;  
+font-weight: 600;  
+letter-spacing: 2px;  
+text-transform: uppercase;  
+padding: 6px 18px;  
+border-radius: 50px;  
+margin-bottom: 24px;  
+}  
+h1 {  
+font-size: 46px;  
+font-weight: 700;  
+margin-bottom: 18px;  
+background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);  
+-webkit-background-clip: text;  
+-webkit-text-fill-color: transparent;  
+line-height: 1.2;  
+}  
+.subtitle {  
+font-size: 17px;  
+font-weight: 400;  
+margin-bottom: 14px;  
+opacity: 0.88;  
+line-height: 1.7;  
+color: #cbd5e1;  
+}  
+/* Stats row */  
+.stats {  
+display: flex;  
+justify-content: center;  
+gap: 32px;  
+margin: 28px 0 44px;  
+flex-wrap: wrap;  
+}  
+.stat {  
+display: flex;  
+flex-direction: column;  
+align-items: center;  
+}  
+.stat-number {  
+font-size: 26px;  
+font-weight: 700;  
+background: linear-gradient(to right, #38bdf8, #818cf8);  
+-webkit-background-clip: text;  
+-webkit-text-fill-color: transparent;  
+}  
+.stat-label {  
+font-size: 11px;  
+font-weight: 500;  
+letter-spacing: 1px;  
+text-transform: uppercase;  
+color: #94a3b8;  
+margin-top: 3px;  
+}  
+.stat-divider {  
+width: 1px;  
+background: rgba(255,255,255,0.12);  
+align-self: stretch;  
+}  
+/* Section label */  
+.section-label {  
+font-size: 11px;  
+font-weight: 600;  
+letter-spacing: 2px;  
+text-transform: uppercase;  
+color: #64748b;  
+margin-bottom: 16px;  
+}  
+.button-group {  
+display: flex;  
+flex-direction: column;  
+gap: 14px;  
+align-items: center;  
+}  
+/* Divider between button groups */  
+.btn-divider {  
+width: 100%;  
+max-width: 400px;  
+height: 1px;  
+background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);  
+margin: 8px 0;  
+}  
+.btn {  
+text-decoration: none;  
+padding: 16px 32px;  
+border-radius: 14px;  
+font-size: 15px;  
+font-weight: 600;  
+width: 380px;  
+transition: all 0.3s ease;  
+display: flex;  
+align-items: center;  
+justify-content: center;  
+gap: 10px;  
+letter-spacing: 0.3px;  
+}  
+/* Primary Button */  
+.btn-primary {  
+background: linear-gradient(90deg, #2563eb, #7c3aed);  
+color: white;  
+box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);  
+}  
+.btn-primary:hover {  
+transform: translateY(-4px);  
+box-shadow: 0 14px 32px rgba(37, 99, 235, 0.5);  
+}  
+/* Secondary Button */  
+.btn-secondary {  
+background: transparent;  
+border: 2px solid #38bdf8;  
+color: #38bdf8;  
+}  
+.btn-secondary:hover {  
+background: #38bdf8;  
+color: #0f172a;  
+transform: translateY(-4px);  
+box-shadow: 0 10px 28px rgba(56, 189, 248, 0.3);  
+}  
+/* Accent Button */  
+.btn-accent {  
+background: linear-gradient(90deg, #f59e0b, #ef4444);  
+color: white;  
+box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35);  
+}  
+.btn-accent:hover {  
+transform: translateY(-4px);  
+box-shadow: 0 14px 32px rgba(245, 158, 11, 0.5);  
+}  
+/* Glass Button */  
+.btn-glass {  
+background: rgba(255,255,255,0.07);  
+border: 1px solid rgba(255,255,255,0.18);  
+backdrop-filter: blur(10px);  
+color: #e2e8f0;  
+}  
+.btn-glass:hover {  
+background: rgba(255,255,255,0.14);  
+transform: translateY(-4px);  
+border-color: rgba(255,255,255,0.32);  
+box-shadow: 0 10px 28px rgba(0,0,0,0.3);  
+}  
+/* Google AI Button — teal/emerald */  
+.btn-google-ai {  
+background: linear-gradient(90deg, #059669, #0d9488);  
+color: white;  
+box-shadow: 0 8px 24px rgba(5, 150, 105, 0.35);  
+position: relative;  
+overflow: hidden;  
+}  
+.btn-google-ai::before {  
+content: '';  
+position: absolute;  
+top: -50%; left: -50%;  
+width: 200%; height: 200%;  
+background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);  
+opacity: 0;  
+transition: opacity 0.3s;  
+}  
+.btn-google-ai:hover::before {  
+opacity: 1;  
+}  
+.btn-google-ai:hover {  
+transform: translateY(-4px);  
+box-shadow: 0 14px 32px rgba(5, 150, 105, 0.5);  
+}  
+/* Google AI Headings Button — indigo/violet */  
+.btn-google-headings {  
+background: linear-gradient(90deg, #6366f1, #a855f7);  
+color: white;  
+box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);  
+position: relative;  
+overflow: hidden;  
+}  
+.btn-google-headings::before {  
+content: '';  
+position: absolute;  
+top: -50%; left: -50%;  
+width: 200%; height: 200%;  
+background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);  
+opacity: 0;  
+transition: opacity 0.3s;  
+}  
+.btn-google-headings:hover::before {  
+opacity: 1;  
+}  
+.btn-google-headings:hover {  
+transform: translateY(-4px);  
+box-shadow: 0 14px 32px rgba(99, 102, 241, 0.5);  
+}  
+/* Folder Button — slate gradient */  
+.btn-folder {  
+background: linear-gradient(90deg, #64748b, #94a3b8);  
+color: white;  
+box-shadow: 0 8px 24px rgba(100, 116, 139, 0.35);  
+position: relative;  
+overflow: hidden;  
+}  
+.btn-folder::before {  
+content: '';  
+position: absolute;  
+top: -50%; left: -50%;  
+width: 200%; height: 200%;  
+background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);  
+opacity: 0;  
+transition: opacity 0.3s;  
+}  
+.btn-folder:hover::before {  
+opacity: 1;  
+}  
+.btn-folder:hover {  
+transform: translateY(-4px);  
+box-shadow: 0 14px 32px rgba(100, 116, 139, 0.5);  
+}  
+/* NEW: 16 Validation Screenshots Button — rose/pink gradient */  
+.btn-new-screenshots {  
+background: linear-gradient(90deg, #ec4899, #f43f5e);  
+color: white;  
+box-shadow: 0 8px 24px rgba(236, 72, 153, 0.35);  
+position: relative;  
+overflow: hidden;  
+}  
+.btn-new-screenshots::before {  
+content: '';  
+position: absolute;  
+top: -50%; left: -50%;  
+width: 200%; height: 200%;  
+background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);  
+opacity: 0;  
+transition: opacity 0.3s;  
+}  
+.btn-new-screenshots:hover::before {  
+opacity: 1;  
+}  
+.btn-new-screenshots:hover {  
+transform: translateY(-4px);  
+box-shadow: 0 14px 32px rgba(236, 72, 153, 0.5);  
+}  
+/* Icon styling */  
+.btn-icon {  
+font-size: 18px;  
+flex-shrink: 0;  
+}  
+.footer {  
+margin-top: 52px;  
+font-size: 13px;  
+color: #475569;  
+letter-spacing: 0.5px;  
+}  
+.footer a {  
+color: #38bdf8;  
+text-decoration: none;  
+}  
+@media (max-width: 600px) {  
+h1 {  
+font-size: 28px;  
+}  
+.btn {  
+width: 100%;  
+font-size: 14px;  
+}  
+.stats {  
+gap: 16px;  
+}  
+.stat-divider {  
+display: none;  
+}  
+.container {  
+padding: 30px 20px;  
+}  
+}  
+</style>  
+</head>  
+<body>  
+<div class="container">  
+<div class="badge">  🌐  World Record Independent Researcher</div>  
+<h1>Global Record-Worthy Achievements</h1>  
+<p class="subtitle">  
+Independent Research Portfolio by <strong>Kallol Chakrabarti</strong><br>  
+Helix Originator · Father of Original Concepts · Top 4.5% on SSRN among 27 million authors.  
+</p>  
+<!-- Stats Row -->  
+<div class="stats">  
+<div class="stat">  
+<span class="stat-number">264+</span>  
+<span class="stat-label">DOI Publications</span>  
+</div>  
+<div class="stat-divider"></div>  
+<div class="stat">  
+<span class="stat-number">219+</span>  
+<span class="stat-label">Original Concepts</span>  
+</div>  
+<div class="stat-divider"></div>  
+<div class="stat">  
+<span class="stat-number">23+</span>  
+<span class="stat-label">World-First Reckoners</span>  
+</div>  
+<div class="stat-divider"></div>  
+<div class="stat">  
+<span class="stat-number">5,000+</span>  
+<span class="stat-label">Global Downloads</span>  
+</div>  
+</div>  
+<div class="button-group">  
+<!-- Button 1: Original -->  
+<a href="Global%20Record-Worthy%20Achievements%20Portfolio.pptx"  
+class="btn btn-primary" target="_blank">  
+<span class="btn-icon">  📘  </span> View Official Portfolio (PPT)  
+</a>  
+<!-- Button 2: Original -->  
+<a href="Screenshots%20of%20Institutions.pdf"  
+class="btn btn-secondary" target="_blank">  
+<span class="btn-icon">  🏛  </span> View Institutional Validations  
+</a>  
+<!-- Button 3: Original -->  
+<a href="All_Screenshots_Kallol_Chakrabarti%20updated.pdf"  
+class="btn btn-accent" target="_blank">  
+<span class="btn-icon">  📸  </span> View Research Validation Screenshots  
+</a>  
+<!-- Button 4: Original -->  
+<a href="https://zenodo.org/records/17417996"  
+class="btn btn-glass" target="_blank">  
+<span class="btn-icon">  🧠  </span> View Desci Labs 90+ Novelty Score Articles (Zenodo DOI)  
+</a>  
+<div class="btn-divider"></div>  
+<!-- Button 5: Google AI Screenshots PDF -->  
+<a href="Google%20AI%20Screenshots.pdf"  
+class="btn btn-google-ai" target="_blank">  
+<span class="btn-icon">  🤖  </span> View Google AI Overview Screenshots  
+</a>  
+<!-- Button 6: Google AI Headings PDF -->  
+<a href="Google_AI_Screenshots_Headings.pdf"  
+class="btn btn-google-headings" target="_blank">  
+<span class="btn-icon">  📋  </span> View Google AI Screenshots Index & Headings  
+</a>  
+<!-- Button 7: Screenshot Folder (GitHub) -->  
+<a href="https://github.com/HelixOriginator/Screenshots-Institutions-Kallol-Chakrabarti-Validation/tree/main/Screenshot%20folder"  
+class="btn btn-folder" target="_blank">  
+<span class="btn-icon">  📁  </span> View Screenshot Folder (GitHub)  
+</a>  
+<!-- Button 8: NEW — 16 New Validation Screenshots -->  
+<a href="https://github.com/HelixOriginator/Screenshots-Institutions-Kallol-Chakrabarti-Validation"  
+class="btn btn-new-screenshots" target="_blank">  
+<span class="btn-icon">  ✨  </span> View 16 New Validation Screenshots (GitHub)  
+</a>  
+</div>  
+<div class="footer">  
+© 2026 Kallol Chakrabarti · Independent Research Documentation  
+</div>  
+</div>  
+</body>  
 </html>
