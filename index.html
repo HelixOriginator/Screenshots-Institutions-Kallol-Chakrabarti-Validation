@@ -384,6 +384,50 @@ transition: opacity 0.3s;
 transform: translateY(-4px);
 box-shadow: 0 14px 32px rgba(124, 58, 237, 0.5);
 }
+/* NEW: Zenodo Peer Reviewed Button --- violet/indigo gradient */
+.btn-zenodo {
+background: linear-gradient(90deg, #8b5cf6, #6366f1);
+color: white;
+box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
+position: relative;
+overflow: hidden;
+}
+.btn-zenodo::before {
+content: '';
+position: absolute;
+top: -50%; left: -50%;
+width: 200%; height: 200%;
+background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+opacity: 0;
+transition: opacity 0.3s;
+}
+.btn-zenodo:hover::before { opacity: 1; }
+.btn-zenodo:hover {
+transform: translateY(-4px);
+box-shadow: 0 14px 32px rgba(139, 92, 246, 0.5);
+}
+/* NEW: SSRN Author Rank Button --- sky/cyan gradient */
+.btn-ssrn {
+background: linear-gradient(90deg, #0ea5e9, #22d3ee);
+color: white;
+box-shadow: 0 8px 24px rgba(14, 165, 233, 0.35);
+position: relative;
+overflow: hidden;
+}
+.btn-ssrn::before {
+content: '';
+position: absolute;
+top: -50%; left: -50%;
+width: 200%; height: 200%;
+background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+opacity: 0;
+transition: opacity 0.3s;
+}
+.btn-ssrn:hover::before { opacity: 1; }
+.btn-ssrn:hover {
+transform: translateY(-4px);
+box-shadow: 0 14px 32px rgba(14, 165, 233, 0.5);
+}
 /* Icon styling */
 .btn-icon {
 font-size: 18px;
@@ -410,7 +454,7 @@ h1 { font-size: 28px; }
 </head>
 <body>
 <div class="container">
-<div class="badge"> 🌐  World Record Independent Researcher</div>
+<div class="badge">  🌐   World Record Independent Researcher</div>
 <h1>Global Record-Worthy Achievements</h1>
 <p class="subtitle">
 Independent Research Portfolio by <strong>Kallol Chakrabarti</strong><br>
@@ -441,66 +485,75 @@ Helix Originator · Father of Original Concepts · Top 4.5% on SSRN among 27 mil
 <div class="button-group">
   <!-- Button 1: Original -->
   <a href="Global%20Record-Worthy%20Achievements%20Portfolio.pptx" class="btn btn-primary" target="_blank">
-    <span class="btn-icon"> 📘 </span> View Official Portfolio (PPT)
+    <span class="btn-icon">  📘  </span> View Official Portfolio (PPT)
   </a>
   <!-- Button 2: Original -->
   <a href="Screenshots%20of%20Institutions.pdf" class="btn btn-secondary" target="_blank">
-    <span class="btn-icon"> 🏛 </span> View Institutional Validations
+    <span class="btn-icon">  🏛  </span> View Institutional Validations
   </a>
   <!-- Button 3: Original -->
   <a href="All_Screenshots_Kallol_Chakrabarti%20updated.pdf" class="btn btn-accent" target="_blank">
-    <span class="btn-icon"> 📸 </span> View Research Validation Screenshots
+    <span class="btn-icon">  📸  </span> View Research Validation Screenshots
   </a>
   <!-- Button 4: Original -->
   <a href="https://zenodo.org/records/17417996" class="btn btn-glass" target="_blank">
-    <span class="btn-icon"> 🧠 </span> View DeSci Labs 90+ Novelty Score Articles (Zenodo DOI)
+    <span class="btn-icon">  🧠  </span> View DeSci Labs 90+ Novelty Score Articles (Zenodo DOI)
   </a>
   <!-- DeSci Novelty Scores PDF -->
   <a href="https://raw.githubusercontent.com/HelixOriginator/Screenshots-Institutions-Kallol-Chakrabarti-Validation/main/desci-novelty-scores.pdf" class="btn btn-glass" target="_blank">
-    <span class="btn-icon"> 📊 </span> View DeSci Novelty Scores Report (PDF)
+    <span class="btn-icon">  📊  </span> View DeSci Novelty Scores Report (PDF)
   </a>
   <div class="btn-divider"></div>
   <!-- Button 5: Google AI Screenshots PDF -->
   <a href="Google%20AI%20Screenshots.pdf" class="btn btn-google-ai" target="_blank">
-    <span class="btn-icon"> 🤖 </span> View Google AI Overview Screenshots
+    <span class="btn-icon">  🤖  </span> View Google AI Overview Screenshots
   </a>
   <!-- Button 6: Google AI Headings PDF -->
   <a href="Google_AI_Screenshots_Headings.pdf" class="btn btn-google-headings" target="_blank">
-    <span class="btn-icon"> 📋 </span> View Google AI Screenshots Index &amp; Headings
+    <span class="btn-icon">  📋  </span> View Google AI Screenshots Index &amp; Headings
   </a>
   <!-- Button 7: Screenshot Folder (GitHub) -->
   <a href="https://github.com/HelixOriginator/Screenshots-Institutions-Kallol-Chakrabarti-Validation/tree/main/Screenshot%20folder" class="btn btn-folder" target="_blank">
-    <span class="btn-icon"> 📁 </span> View Screenshot Folder (GitHub)
+    <span class="btn-icon">  📁  </span> View Screenshot Folder (GitHub)
   </a>
   <!-- Button 8: 16 New Validation Screenshots -->
   <a href="https://github.com/HelixOriginator/Screenshots-Institutions-Kallol-Chakrabarti-Validation" class="btn btn-new-screenshots" target="_blank">
-    <span class="btn-icon"> ✨ </span> View 16 New Validation Screenshots (GitHub)
+    <span class="btn-icon">  ✨  </span> View 16 New Validation Screenshots (GitHub)
   </a>
   <div class="btn-divider"></div>
   <!-- Harvard Certificate Buttons -->
   <a href="harvardx-rhetoric-certificate.jpg" class="btn btn-harvard" target="_blank">
-    <span class="btn-icon"> 🎓 </span> View HarvardX Rhetoric Certificate
+    <span class="btn-icon">  🎓  </span> View HarvardX Rhetoric Certificate
   </a>
   <a href="harvard-facebook-ads-certificate.jpeg" class="btn btn-harvard" target="_blank">
-    <span class="btn-icon"> 🎓 </span> View Harvard Facebook Ads Certificate
+    <span class="btn-icon">  🎓  </span> View Harvard Facebook Ads Certificate
   </a>
   <div class="btn-divider"></div>
   <!-- NEW Button: Peer Reviewer Invitation -->
   <a href="invited%20to%20act%20as%20a%20peer%20reviewer%20for%20a%20book%20chapter.png" class="btn btn-peer-reviewer" target="_blank">
-    <span class="btn-icon"> 📝 </span> View Peer Reviewer Invitation - AI in Managerial Decision-Making
+    <span class="btn-icon">  📝  </span> View Peer Reviewer Invitation - AI in Managerial Decision-Making
+  </a>
+  <div class="btn-divider"></div>
+  <!-- NEW Button: Zenodo Peer Reviewed -->
+  <a href="zenodo-peer-reviewed.png" class="btn btn-zenodo" target="_blank">
+    <span class="btn-icon">  🔬  </span> View Zenodo Peer Reviewed Status
+  </a>
+  <!-- NEW Button: SSRN Author Rank -->
+  <a href="ssrn-author-rank.png" class="btn btn-ssrn" target="_blank">
+    <span class="btn-icon">  📈  </span> View SSRN Author Ranking
   </a>
   <div class="btn-divider"></div>
   <!-- NEW Button: Screenshots of 377 Websites Folder -->
   <a href="https://github.com/HelixOriginator/Screenshots-Institutions-Kallol-Chakrabarti-Validation/tree/main/Scrrenshots%20of%20377%20websites%20folder" class="btn btn-377" target="_blank">
-    <span class="btn-icon"> 🌐 </span> View Screenshots of 377 Websites Folder (GitHub)
+    <span class="btn-icon">  🌐  </span> View Screenshots of 377 Websites Folder (GitHub)
   </a>
   <!-- NEW Button: Institutional Acknowledgement Folder -->
   <a href="https://github.com/HelixOriginator/Screenshots-Institutions-Kallol-Chakrabarti-Validation/tree/main/institutional%20acknowledgement%20folder" class="btn btn-institutional" target="_blank">
-    <span class="btn-icon"> 🏫 </span> View Institutional Acknowledgement Folder (GitHub)
+    <span class="btn-icon">  🏫  </span> View Institutional Acknowledgement Folder (GitHub)
   </a>
   <!-- NEW Button: Validations of Foreign Institutions -->
   <a href="https://github.com/HelixOriginator/Screenshots-Institutions-Kallol-Chakrabarti-Validation/tree/main/validations%20of%20foreign%20institutions" class="btn btn-foreign" target="_blank">
-    <span class="btn-icon"> 🌍 </span> View Validations of Foreign Institutions (GitHub)
+    <span class="btn-icon">  🌍  </span> View Validations of Foreign Institutions (GitHub)
   </a>
 </div>
 <div class="footer">
